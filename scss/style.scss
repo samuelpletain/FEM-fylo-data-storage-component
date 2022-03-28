@@ -1,0 +1,49 @@
+@import "variables";
+@import "./mixins";
+@import "components/menu";
+@import "components/recap";
+@import "components/progress";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.main {
+  min-height: 100vh;
+  margin: auto;
+  padding: 9rem 2rem;
+  background: url('../images/bg-mobile.png') no-repeat top left;
+  background-size: cover;
+  @include breakpoint {
+    background: $neutral-900 url('../images/bg-desktop.png') no-repeat bottom right;    
+    background-size: contain;
+  }
+}
+
+.wrapper {
+  @include breakpoint {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: flex-end;
+  }
+}
+
+.menu {
+  margin-bottom: 1rem;
+  @include breakpoint {
+    margin-bottom: 0;
+  }
+}

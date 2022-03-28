@@ -1,0 +1,46 @@
+.progress {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: flex-end;
+  &::before, &::after {
+    color: $neutral-100;
+    font-weight: 700;
+  }
+  &::before {
+    content: '0 GB';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &::after {
+    content: '1000 GB';
+  }
+}
+
+.bar {
+  height: 1.2rem;
+  padding: .2rem;
+  width: 100%;
+  background: $neutral-900;
+  border-radius: 1rem;
+  display: flex;
+  align-content: center;
+  &__percentage-bar {
+    height: .8rem ;
+    width: 85%;
+    display: block;
+    background-image: linear-gradient(to right, $gradiant-start, $gradiant-end);
+    border-radius: 1rem;
+    padding: .1rem;
+    display: flex;
+    justify-content: flex-end;
+    &::after {
+      content: '';
+      width: .6rem;
+      height: .6rem;
+      background-color: $neutral-100;
+      border-radius: 100%;
+    }
+  }
+}
