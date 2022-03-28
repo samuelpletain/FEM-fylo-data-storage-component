@@ -13,6 +13,7 @@
     padding: 3rem;
   }
   &__content {
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 1rem;
     @include breakpoint {
